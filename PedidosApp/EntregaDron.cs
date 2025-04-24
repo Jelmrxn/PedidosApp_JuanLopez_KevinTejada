@@ -8,6 +8,8 @@ namespace PedidosApp
 {
     public class EntregaDron : IMetodoEntrega
     {
+
+        //Strategy Entrega Dron
         public double CalcularCosto(int km) => 20 * km;
         public string TipoEntrega() => "Dron";
     }
