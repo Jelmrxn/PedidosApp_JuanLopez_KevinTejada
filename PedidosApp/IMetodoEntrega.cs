@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 namespace PedidosApp
 {
 
-
    // Implementacion Interfaz Strategy(IMetodoEntrega)
 
     public interface IMetodoEntrega
