@@ -8,6 +8,8 @@ namespace PedidosApp
 {
     public class EntregaMoto : IMetodoEntrega
     {
+
+        //Strategy Entrega Moto
         public double CalcularCosto(int km) => 10 * km;
         public string TipoEntrega() => "Motocicleta";
     }
