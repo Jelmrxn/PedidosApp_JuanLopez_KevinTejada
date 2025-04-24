@@ -17,6 +17,8 @@ namespace PedidosApp
             InitializeComponent();
         }
 
+
+        //Items btn CheckBox
         private void Form1_Load(object sender, EventArgs e)
         {
             cmbProducto.Items.Add("tecnología");
