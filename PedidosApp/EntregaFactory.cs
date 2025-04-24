@@ -10,16 +10,21 @@ namespace PedidosApp
     //Implementacion patron factory clase EntregaFactory
     public static class EntregaFactory
     {
-        public static IMetodoEntrega CrearEntrega(string tipoProducto, bool urgente, double peso)
+        public static class EntregaFactory
         {
-            if (tipoProducto == "tecnología" && urgente)
-                return new EntregaDron();
-            else if (tipoProducto == "accesorio")
-                return new EntregaMoto();
-            else if (tipoProducto == "componente" || peso > 10)
-                return new EntregaCamion();
-            else
-                return new EntregaMoto(); // Por defecto
+            public static IMetodoEntrega CrearEntrega(string tipoProducto, bool urgente, double peso)
+            {
+                if (peso > 10)
+                    return new EntregaCamion();
+                else if (tipoProducto == "tecnología" && urgente)
+                    return new EntregaDron();
+                else if (tipoProducto == "accesorio")
+                    return new EntregaMoto();
+                else if (tipoProducto == "componente")
+                    return new EntregaCamion();
+                else
+                    return new EntregaMoto(); // Por defecto
+            }
         }
     }
 }

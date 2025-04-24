@@ -15,7 +15,10 @@ namespace PedidosApp
 
         public List<Pedido> Pedidos { get; private set; }
 
-        private RegistroPedidos() => Pedidos = new List<Pedido>();
+        private RegistroPedidos()
+        {
+            Pedidos = new List<Pedido>();
+        }
 
         public static RegistroPedidos Instancia
         {
@@ -23,11 +26,14 @@ namespace PedidosApp
             {
                 lock (_lock)
                 {
-                    return _instancia ??= new RegistroPedidos();
+                    if (_instancia == null)
+                    {
+                        _instancia = new RegistroPedidos();
+                    }
+                    return _instancia;
                 }
             }
         }
-
         public void AgregarPedido(Pedido pedido)
         {
             Pedidos.Add(pedido);
