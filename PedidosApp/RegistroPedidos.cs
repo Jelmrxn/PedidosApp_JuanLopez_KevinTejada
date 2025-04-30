@@ -38,5 +38,10 @@ namespace PedidosApp
         {
             Pedidos.Add(pedido);
         }
+
+        public List<Pedido> ObtenerPedidos()
+        {
+            return Pedidos;
+        }
     }
 }

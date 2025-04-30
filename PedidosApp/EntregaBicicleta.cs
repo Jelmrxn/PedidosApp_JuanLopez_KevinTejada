@@ -8,14 +8,7 @@ namespace PedidosApp
 {
     public class EntregaBicicleta : IMetodoEntrega
     {
-        public double CalcularCosto(int km)
-        {
-            return 3 * km;
-        }
-
-        public string TipoEntrega()
-        {
-            return "Entrega en Bicicleta";
-        }
+        public double CalcularCosto(int km) => 3 * km;
+        public string TipoEntrega() => "bicicleta";
     }
 }
