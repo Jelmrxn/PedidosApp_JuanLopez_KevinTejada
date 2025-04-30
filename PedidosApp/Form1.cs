@@ -66,6 +66,8 @@ namespace PedidosApp
             }
         }
 
+
+        //Implementación cargar historial
         private void CargarHistorialPedidos()
         {
             dgvHistorial.DataSource = null;
