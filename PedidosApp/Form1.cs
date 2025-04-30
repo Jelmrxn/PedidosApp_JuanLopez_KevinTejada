@@ -76,6 +76,8 @@ namespace PedidosApp
             dgvHistorial.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
 
+
+        //Logica de filtrado de cmbFiltroEntrega
         private void cmbFiltroEntrega_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Obtener todos los pedidos
