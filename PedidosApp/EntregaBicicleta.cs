@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace PedidosApp
 {
+
+    //Nueva clase EntregaBicicleta (estrategia)
     public class EntregaBicicleta : IMetodoEntrega
     {
         public double CalcularCosto(int km) => 3 * km;
